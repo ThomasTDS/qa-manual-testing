@@ -1,0 +1,10 @@
+# Normaliza os finais de linha para LF no repositorio, independente do
+# sistema operacional ou da configuracao local de core.autocrlf de cada
+# pessoa. Evita diffs de "arquivo inteiro mudou" causados apenas por
+# CRLF x LF.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary

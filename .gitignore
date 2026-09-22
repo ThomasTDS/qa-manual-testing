@@ -1,0 +1,10 @@
+# Documentação interna do projeto (não deve ser publicada)
+/internal-docs/
+
+# Ambiente e IDE
+.env
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
