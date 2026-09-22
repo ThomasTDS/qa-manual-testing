@@ -21,11 +21,13 @@ incremental.
 
 ## Artefatos
 
-- [Solicitar Empréstimo — ParaBank](casos-de-teste/parabank-solicitar-emprestimo.md):
+### ParaBank
+
+- [Solicitar Empréstimo](casos-de-teste/parabank-solicitar-emprestimo.md):
   regra de negócio extraída diretamente do código-fonte oficial da
   aplicação, tabela de decisão e dezesseis casos de teste rastreados até a
   regra que cada um valida.
-- [Sessão exploratória — Solicitar Empréstimo (ParaBank)](sessoes-exploratorias/parabank-solicitar-emprestimo-22-09-2026.md):
+- [Sessão exploratória — Solicitar Empréstimo](sessoes-exploratorias/parabank-solicitar-emprestimo-22-09-2026.md):
   execução real contra a aplicação, com dois defeitos confirmados (erro
   interno com valor de empréstimo zero e débito de entrada sem checagem
   de saldo individual da conta de origem) e uma correção aplicada ao
@@ -35,6 +37,14 @@ incremental.
 - [BUG-EMP-002 — Aprovação de empréstimo permite saldo negativo na conta de origem](relatorios-de-bugs/bug-emp-002-debito-sem-validar-conta-origem.md):
   severidade crítica, prioridade alta, com efeito cascata confirmado sobre
   pedidos de empréstimo futuros.
+
+### BugBank
+
+- [Transferência](casos-de-teste/bugbank-transferencia.md):
+  regra de negócio extraída da especificação oficial publicada pela
+  própria aplicação, tabela de decisão com três condições combinadas e
+  catorze casos de teste, incluindo cenários que a especificação não
+  cobre explicitamente.
 
 ## Autor
 
