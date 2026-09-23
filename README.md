@@ -45,6 +45,16 @@ incremental.
   própria aplicação, tabela de decisão com três condições combinadas e
   catorze casos de teste, incluindo cenários que a especificação não
   cobre explicitamente.
+- [Sessão exploratória — Cadastro, Login e Transferência](sessoes-exploratorias/bugbank-transferencia-22-09-2026.md):
+  execução manual pela interface, com dois defeitos confirmados (conta
+  duplicada ao recadastrar com o mesmo e-mail, sem fluxo de recuperação
+  de senha; e validação inconsistente do formulário de transferência,
+  incluindo uma mensagem técnica de biblioteca exposta ao usuário) e a
+  confirmação de uma regra funcionando corretamente.
+- [BUG-CAD-001 — Recadastro com e-mail já existente cria conta paralela](relatorios-de-bugs/bug-cad-001-recadastro-sem-verificar-email-duplicado.md):
+  severidade alta, prioridade alta.
+- [BUG-TRF-001 — Validação do formulário de transferência é inconsistente](relatorios-de-bugs/bug-trf-001-validacao-formulario-inconsistente.md):
+  severidade média, prioridade média.
 
 ## Autor
 
