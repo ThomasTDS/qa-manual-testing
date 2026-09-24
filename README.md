@@ -11,6 +11,18 @@ Este repositório é complementar ao portfólio de automação de testes do
 mesmo autor e está em construção — o conteúdo será adicionado de forma
 incremental.
 
+## Destaques
+
+Três achados que resumem o tipo de raciocínio que este portfólio tenta demonstrar — o processo por trás de cada um importa mais do que a lista em si:
+
+- **[Uma conta que fica pra trás sem avisar (BugBank)](relatorios-de-bugs/bug-cad-001-recadastro-sem-verificar-email-duplicado.md).** O BugBank não tem botão de "esqueci minha senha". O caminho mais óbvio que um usuário real tentaria — se cadastrar de novo com o mesmo e-mail — é aceito sem nenhum aviso de duplicidade, e cria uma segunda conta completamente desconectada da primeira. O achado não veio de testar um cenário óbvio de bug; veio de simular o comportamento de alguém que só quer voltar a acessar a própria conta.
+
+- **[Um empréstimo aprovado que deixa a conta no vermelho (ParaBank)](relatorios-de-bugs/bug-emp-002-debito-sem-validar-conta-origem.md).** A regra de aprovação do ParaBank soma o saldo de todas as contas do cliente para decidir se aprova um empréstimo, mas debita a entrada de apenas uma conta específica, sem checar se ela sozinha tem saldo suficiente. Um pedido aprovado corretamente pela regra pode deixar uma conta com saldo negativo, sem aviso — e o efeito se acumula em pedidos futuros.
+
+- **Uma hipótese testada e descartada, não só confirmada.** Nem todo risco sinalizado num design de teste vira defeito: o valor de empréstimo negativo, apontado como candidato a inconsistência no ParaBank, foi executado de verdade e a aplicação lidou com ele corretamente. Documentar isso importa tanto quanto documentar um bug — mostra que a conclusão veio de execução real, não de suposição.
+
+Como cada achado foi levantado (leitura de código-fonte, especificação oficial da aplicação, execução real) está detalhado em [`metodologia.md`](metodologia.md).
+
 ## Estrutura
 
 | Pasta | Conteúdo |
