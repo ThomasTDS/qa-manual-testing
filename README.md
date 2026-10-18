@@ -2,6 +2,8 @@
 
 ![Licença](https://img.shields.io/badge/licen%C3%A7a-MIT-blue.svg)
 
+*[Read in English](README.en.md)*
+
 Portfólio de artefatos de teste manual e exploratório: design de casos de
 teste com rastreabilidade de regra de negócio, relatórios de sessão de teste
 exploratório (Session-Based Test Management) e relatos de defeitos bem
