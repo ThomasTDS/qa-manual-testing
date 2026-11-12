@@ -30,6 +30,7 @@ How each finding was uncovered (source code reading, the application's official 
 | [`casos-de-teste/`](casos-de-teste/) | Test case design with business rule traceability, documenting the technique used (decision table, equivalence partitioning, boundary value analysis) for each feature analyzed |
 | [`sessoes-exploratorias/`](sessoes-exploratorias/) | Exploratory testing session reports (Session-Based Test Management): charter, coverage by area, chronological test log, and confirmed defects |
 | [`relatorios-de-bugs/`](relatorios-de-bugs/) | Reports on real defects found during testing sessions, with reproduction steps, evidence, root-cause analysis, and severity/priority justification |
+| [`colecoes-postman/`](colecoes-postman/) | Postman collections used in the API testing sessions, with assertions on status, message, and data side effects, to reproduce the execution |
 
 > The artifacts linked below are written in Portuguese, the project's working language. This README is an English-language orientation to the repository's content.
 
@@ -77,9 +78,17 @@ How each finding was uncovered (source code reading, the application's official 
   the portfolio's first API testing cycle. Business rule extracted from
   the official source code, a decision table for the cart creation
   validations, a state transition diagram for the cart lifecycle, and
-  twenty-nine test cases, including two suspected inconsistencies
-  identified while reading the code, pending confirmation through
-  execution.
+  twenty-nine test cases, including two hypotheses raised while reading
+  the code (one confirmed as a defect, the other refuted during
+  execution).
+- [Exploratory session — Carts](sessoes-exploratorias/serverest-carrinhos-12-11-2026.md):
+  execution of all 29 cases against the API, with a versioned Postman
+  collection, one confirmed defect (a product repeated out of sequence
+  that breaks stock control) and one discarded hypothesis (an empty
+  product list).
+- [BUG-CAR-001 — A product repeated out of sequence passes validation and breaks stock control](relatorios-de-bugs/bug-car-001-duplicado-nao-vizinho-quebra-estoque.md):
+  high severity, high priority, with 8 units sold of a product that had
+  5 in stock.
 
 ## Author
 

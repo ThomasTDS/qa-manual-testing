@@ -32,6 +32,7 @@ Como cada achado foi levantado (leitura de código-fonte, especificação oficia
 | [`casos-de-teste/`](casos-de-teste/) | Design de casos de teste com rastreabilidade de regra de negócio, documentando a técnica utilizada (tabela de decisão, particionamento de equivalência, análise de valor limite) para cada funcionalidade analisada |
 | [`sessoes-exploratorias/`](sessoes-exploratorias/) | Relatórios de sessão de teste exploratório (Session-Based Test Management): charter, cobertura por área, registro cronológico de teste e defeitos confirmados |
 | [`relatorios-de-bugs/`](relatorios-de-bugs/) | Relatos de defeitos reais encontrados durante as sessões de teste, com passos de reprodução, evidência, análise técnica de causa e justificativa de severidade/prioridade |
+| [`colecoes-postman/`](colecoes-postman/) | Coleções Postman usadas nas sessões de teste de API, com asserções sobre status, mensagem e efeito nos dados, para reproduzir a execução |
 
 ## Artefatos
 
@@ -76,9 +77,17 @@ Como cada achado foi levantado (leitura de código-fonte, especificação oficia
   primeiro ciclo de teste de API do portfólio. Regra de negócio extraída
   do código-fonte oficial, tabela de decisão das validações do cadastro
   de carrinho, diagrama de transição de estados do ciclo de vida do
-  carrinho e vinte e nove casos de teste, incluindo duas suspeitas de
-  inconsistência levantadas na leitura do código, a confirmar por
-  execução.
+  carrinho e vinte e nove casos de teste, incluindo duas hipóteses
+  levantadas na leitura do código (uma confirmada como defeito, outra
+  refutada na execução).
+- [Sessão exploratória — Carrinhos](sessoes-exploratorias/serverest-carrinhos-12-11-2026.md):
+  execução dos 29 casos contra a API, com coleção Postman versionada,
+  um defeito confirmado (produto repetido fora de sequência que quebra o
+  controle de estoque) e uma hipótese descartada (lista de produtos
+  vazia).
+- [BUG-CAR-001 — Produto repetido fora de sequência passa pela validação e quebra o controle de estoque](relatorios-de-bugs/bug-car-001-duplicado-nao-vizinho-quebra-estoque.md):
+  severidade alta, prioridade alta, com venda de 8 unidades de um
+  produto que tinha 5 em estoque.
 
 ## Autor
 
