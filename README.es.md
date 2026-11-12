@@ -32,6 +32,7 @@ Cómo se obtuvo cada hallazgo (lectura del código fuente, especificación ofici
 | [`casos-de-teste/`](casos-de-teste/) | Diseño de casos de prueba con trazabilidad de reglas de negocio, documentando la técnica utilizada (tabla de decisión, partición de equivalencia, análisis de valores límite) para cada funcionalidad analizada |
 | [`sessoes-exploratorias/`](sessoes-exploratorias/) | Informes de sesiones de pruebas exploratorias (Session-Based Test Management): charter, cobertura por área, registro cronológico de pruebas y defectos confirmados |
 | [`relatorios-de-bugs/`](relatorios-de-bugs/) | Reportes de defectos reales encontrados durante las sesiones de prueba, con pasos de reproducción, evidencia, análisis técnico de la causa y justificación de severidad/prioridad |
+| [`colecoes-postman/`](colecoes-postman/) | Colecciones de Postman usadas en las sesiones de pruebas de API, con aserciones sobre el estado, el mensaje y el efecto en los datos, para reproducir la ejecución |
 
 > Los artefactos enlazados a continuación están escritos en portugués, el idioma de trabajo del proyecto. Este README es una guía en español del contenido del repositorio.
 
@@ -80,8 +81,16 @@ Cómo se obtuvo cada hallazgo (lectura del código fuente, especificación ofici
   extraída del código fuente oficial, tabla de decisión de las
   validaciones de creación del carrito, diagrama de transición de
   estados del ciclo de vida del carrito y veintinueve casos de prueba,
-  incluidas dos sospechas de inconsistencia detectadas durante la
-  lectura del código, pendientes de confirmar mediante ejecución.
+  incluidas dos hipótesis surgidas de la lectura del código (una
+  confirmada como defecto y otra refutada en la ejecución).
+- [Sesión exploratoria — Carritos](sessoes-exploratorias/serverest-carrinhos-12-11-2026.md):
+  ejecución de los 29 casos contra la API, con una colección de Postman
+  versionada, un defecto confirmado (un producto repetido fuera de
+  secuencia que rompe el control de stock) y una hipótesis descartada
+  (una lista de productos vacía).
+- [BUG-CAR-001 — Un producto repetido fuera de secuencia pasa la validación y rompe el control de stock](relatorios-de-bugs/bug-car-001-duplicado-nao-vizinho-quebra-estoque.md):
+  severidad alta, prioridad alta, con 8 unidades vendidas de un producto
+  que tenía 5 en stock.
 
 ## Autor
 
