@@ -15,13 +15,15 @@ incremental.
 
 ## Destacados
 
-Tres hallazgos que resumen el tipo de razonamiento que este portafolio intenta demostrar — el proceso detrás de cada uno importa más que la lista en sí:
+Cuatro hallazgos que resumen el tipo de razonamiento que este portafolio intenta demostrar — el proceso detrás de cada uno importa más que la lista en sí:
 
 - **[Una cuenta que queda atrás sin aviso (BugBank)](relatorios-de-bugs/bug-cad-001-recadastro-sem-verificar-email-duplicado.md).** BugBank no tiene un botón de "olvidé mi contraseña". El camino más obvio que intentaría un usuario real — registrarse de nuevo con el mismo correo electrónico — se acepta sin ningún aviso de duplicidad y crea una segunda cuenta completamente desconectada de la primera. El hallazgo no surgió de probar un escenario de bug evidente; surgió de simular el comportamiento de alguien que solo quiere volver a acceder a su propia cuenta.
 
 - **[Un préstamo aprobado que deja la cuenta en números rojos (ParaBank)](relatorios-de-bugs/bug-emp-002-debito-sem-validar-conta-origem.md).** La regla de aprobación de ParaBank suma el saldo de todas las cuentas del cliente para decidir si aprueba un préstamo, pero debita el pago inicial de una sola cuenta específica, sin verificar si esa cuenta por sí sola tiene fondos suficientes. Una solicitud aprobada correctamente por la regla puede dejar una cuenta con saldo negativo, sin aviso — y el efecto se acumula en solicitudes futuras.
 
-- **Una hipótesis probada y descartada, no solo confirmada.** No todo riesgo señalado en un diseño de pruebas se convierte en defecto: el monto de préstamo negativo, marcado como posible inconsistencia en ParaBank, se ejecutó de verdad y la aplicación lo manejó correctamente. Documentar esto importa tanto como documentar un bug — demuestra que la conclusión vino de una ejecución real, no de una suposición.
+- **[Ocho unidades vendidas de un producto que tenía cinco (ServeRest)](relatorios-de-bugs/bug-car-001-duplicado-nao-vizinho-quebra-estoque.md).** La API rechaza un carrito con el mismo producto repetido, pero solo cuando las repeticiones están una al lado de la otra. Con el producto repetido fuera de secuencia, el carrito se acepta, cada línea se compara por separado con el stock y solo se descuenta la última. Después de concluir la compra, otro cliente todavía puede comprar unidades que ya se vendieron. La sospecha surgió de la lectura del código; la ejecución la confirmó y reveló un efecto que el código por sí solo no dejaba claro: la cancelación devuelve el stock exacto, lo que oculta el problema a quien solo prueba ese flujo.
+
+- **Hipótesis probadas y descartadas, no solo confirmadas.** No todo riesgo señalado en un diseño de pruebas se convierte en defecto. El monto de préstamo negativo en ParaBank y la lista de productos vacía en ServeRest se marcaron como posibles inconsistencias, se ejecutaron de verdad y ambas aplicaciones los manejaron correctamente. Documentar esto importa tanto como documentar un bug — demuestra que la conclusión vino de una ejecución real, no de una suposición.
 
 Cómo se obtuvo cada hallazgo (lectura del código fuente, especificación oficial de la aplicación, ejecución real) se detalla en [`metodologia.md`](metodologia.md) *(solo en portugués)*.
 
