@@ -73,6 +73,16 @@ Cómo se obtuvo cada hallazgo (lectura del código fuente, especificación ofici
 - [BUG-TRF-001 — La validación del formulario de transferencia es inconsistente](relatorios-de-bugs/bug-trf-001-validacao-formulario-inconsistente.md):
   severidad media, prioridad media.
 
+### ServeRest
+
+- [Carritos](casos-de-teste/serverest-carrinhos.md):
+  primer ciclo de pruebas de API del portafolio. Regla de negocio
+  extraída del código fuente oficial, tabla de decisión de las
+  validaciones de creación del carrito, diagrama de transición de
+  estados del ciclo de vida del carrito y veintinueve casos de prueba,
+  incluidas dos sospechas de inconsistencia detectadas durante la
+  lectura del código, pendientes de confirmar mediante ejecución.
+
 ## Autor
 
 Desarrollado por [Thomas Teixeira](https://github.com/ThomasTDS) como

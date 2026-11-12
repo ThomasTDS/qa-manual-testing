@@ -71,6 +71,16 @@ How each finding was uncovered (source code reading, the application's official 
 - [BUG-TRF-001 — The transfer form's validation is inconsistent](relatorios-de-bugs/bug-trf-001-validacao-formulario-inconsistente.md):
   medium severity, medium priority.
 
+### ServeRest
+
+- [Carts](casos-de-teste/serverest-carrinhos.md):
+  the portfolio's first API testing cycle. Business rule extracted from
+  the official source code, a decision table for the cart creation
+  validations, a state transition diagram for the cart lifecycle, and
+  twenty-nine test cases, including two suspected inconsistencies
+  identified while reading the code, pending confirmation through
+  execution.
+
 ## Author
 
 Built by [Thomas Teixeira](https://github.com/ThomasTDS) as a study and
