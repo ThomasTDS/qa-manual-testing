@@ -2,7 +2,7 @@
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-*[Leia em português](README.md)*
+*[Leia em português](README.md) · [Leer en español](README.es.md)*
 
 Portfolio of manual and exploratory testing artifacts: test case design
 with business rule traceability, exploratory testing session reports
